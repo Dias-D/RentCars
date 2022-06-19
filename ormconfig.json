@@ -4,7 +4,7 @@
     "port": 5432,
     "username": "postgres",
     "password": "password",
-    "database": "rentx",
+    "database": "rentcars",
     "migrations": [
         "./src/shared/infra/typeorm/migrations/*.ts"
     ],
