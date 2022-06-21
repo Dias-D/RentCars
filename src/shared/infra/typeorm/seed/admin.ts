@@ -3,10 +3,9 @@ import { hash } from "bcrypt";
 import createConnection from "../index";
 
 async function create() {
-    const connection = await createConnection();
+    const connection = await createConnection("localhost");
     const id = uuid();
     const password = await hash("admin", 8);
-    const now = new Date().getTime();
 
     await connection.query(
         `
