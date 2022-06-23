@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # Others folders
-tmp/avatar/
+tmp/*
