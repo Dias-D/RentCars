@@ -1,4 +1,4 @@
-import { CarsRepository } from "@modules/cars/infra/typeorm/repositories/CarsRepository";
+import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
 import { IDateProvider } from "@shared/container/providers/DateProvider/IDateProvider";
 import { AppError } from "@shared/errors/AppError";
 import { inject, injectable } from "tsyringe";
@@ -19,7 +19,7 @@ class CreateRentalUseCase {
         @inject("DayjsDateProvider")
         private dateProvider: IDateProvider,
         @inject("CarsRepository")
-        private carsRepository: CarsRepository
+        private carsRepository: ICarsRepository
     ) { }
 
     async execute({ car_id, user_id, expected_return_date }: IRequest): Promise<Rental> {
